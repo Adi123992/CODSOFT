@@ -52,15 +52,15 @@ class ATM {
 
             switch (choice) {
                 case 1:
-                    System.out.println("Current Balance: ₹" + account.checkBalance());
+                    System.out.println("Current Balance: Rs" + account.checkBalance());
                     break;
                 case 2:
-                    System.out.print("Enter amount to deposit: ₹");
+                    System.out.print("Enter amount to deposit: Rs");
                     double depAmt = s.nextDouble();
                     account.deposit(depAmt);
                     break;
                 case 3:
-                    System.out.print("Enter amount to withdraw: ₹");
+                    System.out.print("Enter amount to withdraw: Rs");
                     double withAmt = s.nextDouble();
                     account.withdraw(withAmt);
                     break;
@@ -76,9 +76,10 @@ class ATM {
 
 public class AtmInterface {
     public static void main(String[] args) {
-        BankAccount myAccount = new BankAccount(1000); // starting balance
+        BankAccount myAccount = new BankAccount(1000); 
         ATM atm = new ATM(myAccount);
         atm.showMenu();
     }
 }
   
+
